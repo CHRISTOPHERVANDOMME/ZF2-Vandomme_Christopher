@@ -19,11 +19,22 @@ return array(
                     'defaults' => array(
                         'controller' => 'MiniModule\Controller\Index',
                         'action'     => 'index',
-                    ),
-                ),
-            ),
-        ),
-    ),
+                   )
+                 )
+           ),
+           'default' => array(
+               'type' => 'Zend\Mvc\Router\Http\Segment',
+               'options' => array(
+                 'route' => '/:action',
+                   'constraints' => array(),
+                   'defaults' => array(
+                      'controller' => 'MiniModule\Controller\Index',
+                      'action' => 'index'
+                   ),
+              ),
+          ),
+       )
+   ),
     'controllers' => array(
         'invokables' => array(
             'MiniModule\Controller\Index' => Controller\IndexController::class,
@@ -34,6 +45,8 @@ return array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'minimodule/index/index' => __DIR__ . '/../view/minimodule/index/index.phtml',
             'error'             => __DIR__ . '/../view/error.phtml',
+            'minimodule/index/form'=> __DIR__.'/../view/minimodule/index/form.phtml',
+            'minimodule/index/traite'=> __DIR__.'/../view/minimodule/index/traite.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',

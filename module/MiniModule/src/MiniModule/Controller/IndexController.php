@@ -20,4 +20,16 @@ class IndexController extends AbstractActionController
         $view->setTemplate("minimodule/index/index.phtml");
 		return $view;
     }
+
+    public function formAction() {
+    	$view = new ViewModel(array());
+        $view->setTemplate("minimodule/index/form.phtml");
+    	return $view;
+    }
+
+    public function traiteAction() {
+    	$view = new ViewModel(array('login' => $_GET['log'],));
+        $view->setTemplate("minimodule/index/traite.phtml");
+		return $view;
+    }
 }
