@@ -38,7 +38,21 @@ class IndexController extends AbstractActionController
                         ),
                         'options' => array(
                           'label' => 'Login : ',
+                          ),
+                        
+                    ),
+                ),
+                array(
+                    'spec' => array(
+                        'type' => 'Zend\Form\Element\Text',
+                        'name' => 'pwd',
+                        'attributes' => array(
+                            'size' => '20',
                         ),
+                        'options' => array(
+                          'label' => 'Password : ',
+                          ),
+                        
                     ),
                 ),
                 // le boutton de validation
@@ -63,7 +77,7 @@ class IndexController extends AbstractActionController
     }
 
     public function traiteAction() {
-    	$view = new ViewModel(array('login' => $_POST['log'],));
+    	$view = new ViewModel(array('login' => $_POST['log'], 'pass' => $_POST['pwd'],));
         $view->setTemplate("minimodule/index/traite.phtml");
 		return $view;
     }
