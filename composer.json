@@ -13,6 +13,7 @@
 		"zendframework/zend-serializer":"2.*",
 		"zendframework/zend-log":"2.*",
 		"zendframework/zend-I18n":"2.*",
-		"zendframework/zendframework": "~2.5"
+		"zendframework/zendframework": "~2.5",
+		"gowsram/g-maps": "dev-master"
 	}
 }

@@ -33,6 +33,16 @@ return array(
                    ),
               ),
           ),
+          /*'default' => array(
+              'type' => 'Zend\Mvc\Router\Http\Segment',
+              'options' => array(
+                  'route' => '/',
+                  'defaults' => array(
+                      'controller' => 'MiniModule\Controller\Index',
+                      'action' => 'index'
+                    ),
+                ),
+            ),*/
        )
    ),
     'controllers' => array(
@@ -47,16 +57,11 @@ return array(
             'error'             => __DIR__ . '/../view/error.phtml',
             'minimodule/index/form'=> __DIR__.'/../view/minimodule/index/form.phtml',
             'minimodule/index/traite'=> __DIR__.'/../view/minimodule/index/traite.phtml',
+            'minimodule/index/gmaps'=> __DIR__.'/../view/minimodule/index/gmaps.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
     ),
-    // Placeholder for console routes
-    'console' => array(
-        'router' => array(
-            'routes' => array(
-            ),
-        ),
-    ),
+    
 );

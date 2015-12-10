@@ -10,6 +10,7 @@ return array(
     // On ajoute le module à la config
     'modules' => array(
         'MiniModule',
+        'GMaps',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
